@@ -2,7 +2,7 @@
 set -e
 
 INTEL_INSTALLER_URL="http://home.macintosh.garden/~vmgl/Files/Intel_OS_X.zip"
-OLD_UNREAL_PATCH_URL="https://github.com/OldUnreal/UnrealTournamentPatches/releases/download/v469d/OldUnreal-UTPatch469e-macOS.dmg"
+OLD_UNREAL_PATCH_URL="https://github.com/OldUnreal/UnrealTournamentPatches/releases/download/v469e-rc7/OldUnreal-UTPatch469e-macOS.dmg"
 ASSETS_DIR="$HOME/Library/Application Support/Unreal Tournament"
 
 echo "This script will install Unreal Tournament 99 on your Mac."
@@ -53,15 +53,15 @@ fi
 # Download INTEL_INSTALLER_URL
 echo "Downloading $INTEL_INSTALLER_URL.."
 curl "$INTEL_INSTALLER_URL" \
-  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8' \
-  -H 'Accept-Language: en-US,en;q=0.5' \
-  -H 'Connection: keep-alive' \
-  -H 'Sec-GPC: 1' \
-  -H 'Upgrade-Insecure-Requests: 1' \
-  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36' \
-  --compressed \
-  --insecure \
-  -s -L -o "$TEMP_DIR/Intel_OS_X.zip"
+    -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8' \
+    -H 'Accept-Language: en-US,en;q=0.5' \
+    -H 'Connection: keep-alive' \
+    -H 'Sec-GPC: 1' \
+    -H 'Upgrade-Insecure-Requests: 1' \
+    -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36' \
+    --compressed \
+    --insecure \
+    -s -L -o "$TEMP_DIR/Intel_OS_X.zip"
 
 # Unzip INTEL_INSTALLER_URL
 echo "Unzipping $INTEL_INSTALLER_URL.."
